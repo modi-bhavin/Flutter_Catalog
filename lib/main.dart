@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/Home_page_Velocity_X_UI.dart';
+import 'package:flutter_catalog/pages/home_detail_page.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/home_page_grid.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
