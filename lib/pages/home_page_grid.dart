@@ -69,8 +69,8 @@ class _HomePageGridState extends State<HomePageGrid> {
                         child: GridTile(
                           header: Container(
                             padding: const EdgeInsets.all(12),
-                            decoration:
-                                const BoxDecoration(color: Colors.deepPurple),
+                            decoration: const BoxDecoration(
+                                color: Color.fromARGB(255, 153, 136, 181)),
                             child: Text(
                               item.name,
                               style: const TextStyle(color: Colors.white),
@@ -78,15 +78,20 @@ class _HomePageGridState extends State<HomePageGrid> {
                           ),
                           footer: Container(
                             padding: const EdgeInsets.all(12),
-                            decoration:
-                                const BoxDecoration(color: Colors.black),
+                            decoration: const BoxDecoration(
+                                color: Color.fromARGB(255, 75, 75, 75)),
                             child: Text(
                               "\$${item.price.toString()}",
                               style: const TextStyle(color: Colors.white),
                             ),
                           ),
-                          child: Image.network(
-                            item.image,
+                          child: Container(
+                            margin: const EdgeInsets.all(30),
+                            height: 100.0,
+                            width: 50.0,
+                            child: Image.network(
+                              item.image,
+                            ),
                           ),
                         ));
                   }),
