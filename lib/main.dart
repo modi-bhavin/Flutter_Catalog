@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/Home_page_Velocity_X_UI.dart';
+import 'package:flutter_catalog/pages/cart_page.dart';
 import 'package:flutter_catalog/pages/home_detail_page.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/home_page_grid.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.homeGridRoute: (context) => const HomePageGrid(),
         MyRoutes.homeUIRoute: (context) => const HomePageUI(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
+        MyRoutes.cartRoute: (context) => const CartPage(),
       },
     );
   }

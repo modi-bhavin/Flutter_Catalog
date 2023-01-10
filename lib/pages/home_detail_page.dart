@@ -17,6 +17,7 @@ class HomeDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: "Product Detail"
             .text
             .xl
@@ -52,7 +53,12 @@ class HomeDetailsPage extends StatelessWidget {
                       catalog.desc.text.xl
                           .textStyle(context.captionStyle)
                           .make(),
-                      10.heightBox
+                      10.heightBox,
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus felis vel neque vulputate convallis. Ut tempor orci commodo dui lacinia pulvinar. Etiam at mauris libero. Duis semper, nibh at suscipit aliquet, mauris ligula consectetur mauris."
+                          .text
+                          .textStyle(context.captionStyle)
+                          .make()
+                          .p16()
                     ],
                   ).py64(),
                 ),
@@ -74,8 +80,8 @@ class HomeDetailsPage extends StatelessWidget {
                   backgroundColor:
                       MaterialStateProperty.all(MyTheme.darkBluishColor),
                   shape: MaterialStateProperty.all(const StadiumBorder())),
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add to cart".text.make(),
+            ).wh(120, 50)
           ],
         ).p32(),
       ),
