@@ -18,14 +18,10 @@ class HomeDetailsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: "Product Detail"
-            .text
-            .xl
-            .semiBold
-            .color(MyTheme.darkBluishColor)
-            .make(),
+        title:
+            "Product Detail".text.xl.semiBold.color(context.accentColor).make(),
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -43,11 +39,11 @@ class HomeDetailsPage extends StatelessWidget {
                 edge: VxEdge.TOP,
                 child: Container(
                   width: context.screenWidth,
-                  color: Colors.white,
+                  color: context.cardColor,
                   child: Column(
                     children: [
                       catalog.name.text.xl4
-                          .color(MyTheme.darkBluishColor)
+                          .color(context.accentColor)
                           .bold
                           .make(),
                       catalog.desc.text.xl
@@ -68,7 +64,7 @@ class HomeDetailsPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -78,7 +74,7 @@ class HomeDetailsPage extends StatelessWidget {
               onPressed: () {},
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(MyTheme.darkBluishColor),
+                      MaterialStateProperty.all(context.theme.buttonColor),
                   shape: MaterialStateProperty.all(const StadiumBorder())),
               child: "Add to cart".text.make(),
             ).wh(120, 50)
