@@ -19,19 +19,20 @@ class MyTheme {
           titleTextStyle: Theme.of(context).textTheme.headline6));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
-        brightness: Brightness.dark,
-        fontFamily: GoogleFonts.poppins().fontFamily,
-        cardColor: Colors.black,
-        canvasColor: darkCreameColor,
-        buttonColor: lightBluishColor,
-        accentColor: Colors.white,
-        appBarTheme: AppBarTheme(
-            color: Colors.black,
-            elevation: 0.0,
-            iconTheme: const IconThemeData(color: Colors.white),
-            toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
-            titleTextStyle: Theme.of(context).textTheme.headline6),
-      );
+      brightness: Brightness.dark,
+      fontFamily: GoogleFonts.poppins().fontFamily,
+      cardColor: Colors.black,
+      canvasColor: darkCreameColor,
+      buttonColor: lightBluishColor,
+      accentColor: Colors.white,
+      appBarTheme: AppBarTheme(
+        color: Colors.black,
+        elevation: 0.0,
+        iconTheme: const IconThemeData(color: Colors.white),
+        textTheme: Theme.of(context).textTheme.copyWith(
+            headline6:
+                context.textTheme.headline6?.copyWith(color: Colors.white)),
+      ));
 
   //Colors
   static Color creamColor = const Color(0xfff5f5f5);

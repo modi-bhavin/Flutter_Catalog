@@ -18,8 +18,7 @@ class HomeDetailsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title:
-            "Product Detail".text.xl.semiBold.color(context.accentColor).make(),
+        title: "Product Detail".text.xl.semiBold.make(),
       ),
       backgroundColor: context.canvasColor,
       body: SafeArea(
