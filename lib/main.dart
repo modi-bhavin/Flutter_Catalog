@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/pages/Home_page_Velocity_X_UI.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/home_page_grid.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
@@ -19,11 +20,12 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
-      initialRoute: MyRoutes.homeGridRoute,
+      initialRoute: MyRoutes.homeUIRoute,
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.homeRoute: (context) => const HomePage(),
         MyRoutes.homeGridRoute: (context) => const HomePageGrid(),
+        MyRoutes.homeUIRoute: (context) => const HomePageUI(),
         MyRoutes.loginRoute: (context) => const LoginPage(),
       },
     );
